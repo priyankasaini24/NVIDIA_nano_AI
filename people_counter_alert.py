@@ -28,12 +28,12 @@ class DetectorAPI:
         this.detection_classes = this.detection_graph.get_tensor_by_name('detection_classes:0')
         this.num_detections = this.detection_graph.get_tensor_by_name('num_detections:0')
 
-    def processFrame(self, image):
+    def processFrame(this, image):
         # Expand dimensions since the trained_model expects images to have shape: [1, None, None, 3]
         image_np_expanded = np.expand_dims(image, axis=0)
         # Actual detection.
         start_time = time.time()
-        (boxes, scores, classes, num) = self.sess.run([self.detection_boxes, self.detection_scores, self.detection_classes, self.num_detections], feed_dict={self.image_tensor: image_np_expanded})
+        (boxes, scores, classes, num) = this.sess.run([this.detection_boxes, this.detection_scores, this.detection_classes, this.num_detections], feed_dict={this.image_tensor: image_np_expanded})
         end_time = time.time()
 
         print("Frame per second(fps):", 1/(end_time-start_time))
