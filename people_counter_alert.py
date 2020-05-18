@@ -3,7 +3,7 @@ import numpy as np
 import tensorflow as tf
 import cv2
 import time
-
+import winsound
 class DetectorAPI:
     def __init__(this, path_to_ckpt):
         this.path_to_ckpt = 'ssdlite_mobilenet_v2_coco_2018_05_09/frozen_inference_graph.pb'
@@ -52,7 +52,8 @@ class DetectorAPI:
         this.sess.close()
         this.default_graph.close()
 
-
+frequency = 2000
+duration = 60
 if __name__ == "__main__":
 
     odapi = DetectorAPI(path_to_ckpt='ssdlite_mobilenet_v2_coco_2018_05_09/frozen_inference_graph.pb')
@@ -81,7 +82,7 @@ if __name__ == "__main__":
         cv2.putText(video,"Person detected {}".format(str(count)),(45,70), font, 1,(255,0,0),1,cv2.LINE_AA)
         if count >= 3:
             cv2.putText(img,"Detected 3 or more than 3 people!",(100,350), font, 1,(0,0,255),1,cv2.LINE_AA)
-            
+            winsound.Beep(frequency, duration)
         cv2.imshow("people counter", video)
 
         key = cv2.waitKey(1)
