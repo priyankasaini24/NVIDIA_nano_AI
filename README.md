@@ -1,6 +1,6 @@
 # Covid 19 Alert system
 
-This Alert system monitors and  counts number of people passing by or standing in an area. It also Alert with the sound when camera detects more than maximum number of people defined. This project can be one of the solution to fight Covid-19 by maintaining social distancing, avoiding people gatherings and can be useful for Authorities to monitor areas as a Surveillance system.
+This Alert system monitors and  counts number of people passing by or standing in an area. It also Alert with the sound when camera detects more than maximum number of people defined. This project can be one of the solutions to fight Covid-19 by maintaining social distancing, avoiding people gatherings and can be useful for Authorities to monitor areas as a Surveillance system.
 
 See project - [![](http://img.youtube.com/vi/bEtI82LdjTo/0.jpg)](http://www.youtube.com/watch?v=bEtI82LdjTo "Covid-19 Alert System using NVIDIA Jetson Nano")
 
