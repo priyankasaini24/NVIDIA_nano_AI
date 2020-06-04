@@ -8,9 +8,13 @@ This system is based on __NVIDIA Jetson Nano__ and uses Computer vision, Deep Ne
 ## Requirements
 
 NVIDIA Jetson nano
+
 JetPack 4.3
+
 OpenCV 4.1.0
+
 Tensorflow 2.0.0
+
 
 ## Files inside this Repository
 
